@@ -27,13 +27,13 @@ public class CourseService
     public void enrollStudent(String studentId, String courseId){
         //TODO implement so it adds the given course form the student
     	students.get(studentId).enroll(courses.get(courseId));
-    	System.out.println("Cursos inscriptos: "+students.get(studentId).totalEnrolledCourses());
+    	System.out.println("Se inscribió al curso de: "+courses.get(courseId).getCourseName() +", cursos inscriptos: "+students.get(studentId).totalEnrolledCourses());
     }
 
     public void unEnrollStudent(String studentId, String courseId){
         //TODO implement so it removes the given course form the student
     	students.get(studentId).unEnroll(courses.get(courseId));
-    	System.out.println("Cursos inscriptos: "+students.get(studentId).totalEnrolledCourses());
+    	System.out.println("Se desinscribió al curso de: "+courses.get(courseId).getCourseName() +", cursos inscriptos: "+students.get(studentId).totalEnrolledCourses());
     }
 
     public void displayCourseInformation(String courseId){
